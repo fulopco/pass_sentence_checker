@@ -19,7 +19,7 @@ public class Validator {
     int counter = 0;
 
     for (int i = 0; i < sentences.size(); i++) {
-      if (containsMoreThanOneWord(sentences.get(i)) && endsWithPunctuation(sentences.get(i)) && hasNoDuplications(sentences.get(i))) {
+      if (containsMoreThanOneWord(sentences.get(i)) && endsWithPunctuation(sentences.get(i)) && hasNoDuplications(sentences.get(i)) && containsOnlyLowercaseEnglishABCLetters(sentences.get(i))) {
         System.out.println(sentences.get(i));
         counter++;
       }
@@ -39,13 +39,21 @@ public class Validator {
   }
 
   private boolean hasNoDuplications(String sentence) {
-    if (endsWithPunctuation(sentence)) {
       String[] splittedArray = sentence.substring(0,sentence.length()-1).split(" ");
       Set<String> splittedSet = new HashSet<>(Arrays.asList(splittedArray));
 
       return splittedArray.length == splittedSet.size();
+  }
+
+  private boolean containsOnlyLowercaseEnglishABCLetters(String sentence) {
+    char[] letters = sentence.substring(0,sentence.length()-1).toCharArray();
+    for(int i = 0; i < letters.length; i++) {
+      int ascii = (int) letters[i];
+      if(ascii != 32 && (ascii < 97 || ascii > 122)) {
+        return false;
+      }
     }
-    return false;
+    return true;
   }
 
 }
