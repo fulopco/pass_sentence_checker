@@ -1,11 +1,14 @@
 package com.corinna.fulop;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Reader {
 
+  public List<String> readEachLine() throws IOException {
 
-  public void readEachLine() throws IOException {
+    List<String> sentences = new ArrayList<>();
 
     File file = new File("input.txt");
     FileReader fileReader = new FileReader(file);
@@ -13,9 +16,10 @@ public class Reader {
 
     String line;
     while ((line = bufferedReader.readLine()) != null) {
-        System.out.println(line);
+        sentences.add(line);
     }
 
+    return sentences;
   }
 
 }

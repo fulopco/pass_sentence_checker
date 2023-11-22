@@ -6,6 +6,7 @@ public class Main {
 
   public static void main(String[] args) throws IOException {
     Reader reader = new Reader();
-    reader.readEachLine();
+    Validator validator = new Validator(reader);
+    validator.checkSentences();
   }
 }
