@@ -1,10 +1,7 @@
 package com.corinna.fulop;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Validator {
 
@@ -19,7 +16,7 @@ public class Validator {
     int counter = 0;
 
     for(int i = 0; i < sentences.size(); i++) {
-      if(hasNoDuplications(sentences.get(i))) {
+      if(hasNoDuplications(sentences.get(i)) && containsMoreThanOneWord(sentences.get(i))) {
         counter++;
       }
     }
@@ -35,5 +32,8 @@ public class Validator {
     return splittedArray.length == splittedSet.size();
   }
 
+  private boolean containsMoreThanOneWord(String sentence) {
+    return sentence.split(" ").length > 1;
+  }
 
 }
