@@ -6,13 +6,7 @@ import java.util.List;
 
 public class Reader {
 
-  private Validator validator;
-
-  public Reader(Validator validator) {
-    this.validator = validator;
-  }
-
-  public void readEachLine() throws IOException {
+  public List<String> readEachLine() throws IOException {
 
     List<String> sentences = new ArrayList<>();
 
@@ -22,11 +16,10 @@ public class Reader {
 
     String line;
     while ((line = bufferedReader.readLine()) != null) {
-        System.out.println(line);
         sentences.add(line);
     }
-    validator.checkSentences(sentences);
 
+    return sentences;
   }
 
 }
