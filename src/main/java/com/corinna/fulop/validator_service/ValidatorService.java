@@ -22,8 +22,8 @@ public class ValidatorService {
     int counter = 0;
 
     for (String sentence : sentences) {
-      if(validateSentence(sentence)) {
-      counter++;
+      if (validateSentence(sentence)) {
+        counter++;
       }
     }
 
@@ -34,8 +34,6 @@ public class ValidatorService {
   private boolean validateSentence(String sentence) {
     for (ValidatorI validator : validators) {
       if (!validator.validate(sentence)) {
-        System.out.println(sentence);
-        System.out.println(validator);
         return false;
       }
     }
