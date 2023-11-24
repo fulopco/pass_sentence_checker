@@ -1,7 +1,6 @@
 package com.corinna.fulop.validator_service;
 
 import com.corinna.fulop.Reader;
-
 import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
@@ -16,7 +15,7 @@ public class ValidatorService {
     this.validators = validators;
   }
 
-  public int checkSentences() throws IOException {
+  public void checkSentences() throws IOException {
     List<String> sentences = reader.readEachLine();
 
     int counter = 0;
@@ -28,7 +27,6 @@ public class ValidatorService {
     }
 
     System.out.println("Helyes jelmondatok száma: " + counter);
-    return counter;
   }
 
   private boolean validateSentence(String sentence) {
