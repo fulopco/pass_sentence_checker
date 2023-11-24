@@ -16,7 +16,9 @@ public class Reader {
 
     String line;
     while ((line = bufferedReader.readLine()) != null) {
+      if(!line.equals("")) {
         sentences.add(line);
+      }
     }
 
     return sentences;
