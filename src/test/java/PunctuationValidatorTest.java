@@ -20,15 +20,18 @@ public class PunctuationValidatorTest {
     return Stream.of(
             Arguments.of("The quick brown fox jumps over the lazy dog.", true),
             Arguments.of("123 Street .", false),
-            Arguments.of("multiple punctuation marks!!", true),
-            Arguments.of("space before punctuation !", false),
+            Arguments.of("hello !", false),
+            Arguments.of("hello  !", false),
+            Arguments.of("hello           !", false),
+            Arguments.of("multiple punctuation marks are not allowed!!", false),
+            Arguments.of("space before punctuation not allowed !", false),
             Arguments.of("testing asd", false),
             Arguments.of("hello world!", true),
             Arguments.of("not valid", false),
             Arguments.of("valid sentence?", true),
             Arguments.of("this", false),
             Arguments.of("    !", false),
-            Arguments.of("!!!", true)
+            Arguments.of("!!!", false)
     );
   }
 }
