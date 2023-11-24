@@ -9,12 +9,10 @@ import java.util.List;
 public class ValidatorService {
 
   private final Reader reader;
-  private final ConsoleLogger consoleLogger;
   private final Collection<ValidatorI> validators;
 
-  public ValidatorService(Reader reader, ConsoleLogger consoleLogger, Collection<ValidatorI> validators) {
+  public ValidatorService(Reader reader, Collection<ValidatorI> validators) {
     this.reader = reader;
-    this.consoleLogger = consoleLogger;
     this.validators = validators;
   }
 
@@ -29,7 +27,6 @@ public class ValidatorService {
       }
     }
 
-    consoleLogger.printTextToConsol("Helyes jelmondatok száma: " + counter);
     return counter;
   }
 

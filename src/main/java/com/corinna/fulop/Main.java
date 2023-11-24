@@ -10,6 +10,7 @@ import java.util.List;
 public class Main {
 
   public static void main(String[] args) throws IOException {
+
     Reader reader = new Reader();
     ConsoleLogger logger = new ConsoleLogger();
     Collection<ValidatorI> validators = new ArrayList<>(List.of(
@@ -19,8 +20,9 @@ public class Main {
             new LetterValidator()
     ));
 
-    ValidatorService validator = new ValidatorService(reader, logger, validators);
-    validator.validSentenceCounter();
+    ValidatorService validator = new ValidatorService(reader, validators);
+    int result = validator.validSentenceCounter();
+    logger.printTextToConsol(result);
   }
 
 

@@ -2,7 +2,7 @@ package com.corinna.fulop.ui;
 
 public class ConsoleLogger {
 
-  public void printTextToConsol(String text) {
-    System.out.println(text);
+  public void printTextToConsol(int result) {
+    System.out.println("Helyes jelmondatok száma: "+result);
   }
 }
