@@ -13,12 +13,12 @@ public class Main {
 
     Reader reader = new Reader();
     ConsoleLogger logger = new ConsoleLogger();
-    Collection<ValidatorI> validators = new ArrayList<>(List.of(
+    Collection<ValidatorI> validators = List.of(
             new WordLengthValidator(),
             new PunctuationValidator(),
             new DuplicationValidator(),
             new LetterValidator()
-    ));
+    );
 
     ValidatorService validator = new ValidatorService(reader, validators);
     int result = validator.validSentenceCounter();
