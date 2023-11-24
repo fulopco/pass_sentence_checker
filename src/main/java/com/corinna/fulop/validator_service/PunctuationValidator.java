@@ -9,7 +9,7 @@ public class PunctuationValidator implements ValidatorI {
 
   @Override
   public boolean validate(String sentence) {
-      return PUNCTUATION.contains(sentence.charAt(sentence.length() - 1));
+      return PUNCTUATION.contains(sentence.charAt(sentence.length() -1)) && sentence.charAt(sentence.length() -2) != ' ';
   }
 
 }

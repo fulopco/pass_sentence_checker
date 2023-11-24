@@ -6,6 +6,7 @@ public class WordLengthValidator implements ValidatorI{
 
   @Override
   public boolean validate(String sentence) {
-    return sentence.split(" ").length > MINIMUM_LENGTH;
+    return sentence.trim().split(" ").length > MINIMUM_LENGTH;
   }
+
 }
