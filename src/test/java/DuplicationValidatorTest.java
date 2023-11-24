@@ -9,7 +9,7 @@ public class DuplicationValidatorTest {
 
   @ParameterizedTest
   @MethodSource("provideValuesForDuplication")
-  void sentenceOnlyAcceptableWhenNoDuplications(String sentence, boolean expected) {
+  void hasNoDuplicatesWordsOrSpaces(String sentence, boolean expected) {
     DuplicationValidator duplicationValidator = new DuplicationValidator();
     boolean actual = duplicationValidator.validate(sentence);
 
@@ -22,11 +22,13 @@ public class DuplicationValidatorTest {
             Arguments.of("korte alma ! ", true),
             Arguments.of("there is 2  space next to each other!", false),
             Arguments.of("case Case sensitivity!", true),
-            Arguments.of("Multiple   spaces.", false),
+            Arguments.of("Multiple         spaces.", false),
             Arguments.of("word1 word2 word1!", false),
-            Arguments.of(" .", true),
-            Arguments.of("asd  helloo!", false),
-            Arguments.of("asd dsa    space   word !", false)
+            Arguments.of("asd  hello!", false),
+            Arguments.of("asd dsa    space   word !", false),
+            Arguments.of("   spaces!", false),
+            Arguments.of("  tab       .", false),
+            Arguments.of("   a!", false)
     );
   }
 
