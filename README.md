@@ -20,7 +20,7 @@ To use the program, follow the steps below:
 
 Download:
 
-1) Go to: https://github.com/fulopco/pass_sentence_checker/releases 
+1) Go to: https://github.com/fulopco/pass_sentence_checker/releases/tag/v1.0.0
 
 2) Download pass_sentence_checker.jar. 
 
