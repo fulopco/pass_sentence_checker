@@ -1,7 +1,7 @@
 package com.corinna.fulop;
 
+import com.corinna.fulop.ui.ConsoleLogger;
 import com.corinna.fulop.validator_service.*;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,6 +11,7 @@ public class Main {
 
   public static void main(String[] args) throws IOException {
     Reader reader = new Reader();
+    ConsoleLogger logger = new ConsoleLogger();
     Collection<ValidatorI> validators = new ArrayList<>(List.of(
             new WordLengthValidator(),
             new PunctuationValidator(),
@@ -18,7 +19,9 @@ public class Main {
             new LetterValidator()
     ));
 
-    ValidatorService validator = new ValidatorService(reader, validators);
-    validator.checkSentences();
+    ValidatorService validator = new ValidatorService(reader, logger, validators);
+    validator.validSentenceCounter();
   }
+
+
 }
