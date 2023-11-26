@@ -1,11 +1,55 @@
 alma korte!
-
 szilva.
-
 citrom lime
-
 korte korte?
-
 dinnye, ananasz, fuge.
-
 Alma Korte!
+
+empty lines are not read by the program!
+no double spaces  next to each other allowed.
+no spaces    next to each other allowed.
+no space before punctuation allowed !
+no spaces before punctuation allowed   !
+no special characters as _#&@! allowed!
+collected some invalid lines here:
+!
+?!
+   !
+?
+  sentences cannot start with spaces!
+    sentences cannot start with tabs!
+sentences cannot end with tabs!		
+sentences cannot end with space! 
+sentences can only end with a single punctuation!?!?
+	
+  
+the two lines above contains only spaces or tabs and are considered as invalid passwords!
+No uppercases!
+not even IN the middel of the sentence.
+invalid!
+invalid !
+invalid
+! invalid
+in?valid
+no numbers 4llowed!
+csak az angol ábc betűi engedélyezettek.
+
+more tests:
+lorem ipsum dolor sit amet consectetur adipiscing elit.
+ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam quis nostrud exercitation!
+ullamco laboris nisi ut aliquip ex ea commodo consequat?
+duis aute irure dolor, in reprehenderit in voluptate.
+velit esse cillum dolore eu fugiat nulla pariatur. 
+excep  teur sint occaecat cupidatat non proident.
+culpá qui officiá deserunt mollit ánim id est láborum.
+
+
+Hisz mindenutt jo, de legjobb a szabadban.
+szalmaszallal a szajban szalmakalapban.
+nincs ido se ter nincs hajtas a keresetér’.
+ami keveset er hiaba volt heves a tel.
+nem „S” a cel hanem „XXL”.
+nyari lagy szello forro napsugarral bizniszel.
+testem testem lelki froccse aki kapcsolati toke.
+azon dolgok egyike miben maradnek orokre!
